@@ -11,6 +11,6 @@ public class PickUpController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(15,0, 0);
+        transform.Rotate(new Vector3(80,0,0)*Time.deltaTime);
     }
 }
