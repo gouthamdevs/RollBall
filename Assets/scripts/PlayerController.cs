@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public GameObject LoseText;
 
     public GameObject EnemeyObject;
+
+    public AudioSource pointSound;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("PickUP"))
         {
             other.gameObject.SetActive(false);
+            pointSound.Play();
             count += 1;
             SetPoints();
         }
